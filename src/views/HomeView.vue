@@ -24,11 +24,21 @@
   </BvNavbar>
   <BvNavbar sticky shadow expand="lg" theme="light" background-color="light" style="--bs-bg-opacity: .5;">
     <BvContainer type="fluid">
-      <BvNavbarToggler></BvNavbarToggler>
+          <BvButton
+      button="primary"
+      toggle="collapse"
+      target="#collapseWidthExample"
+    >Button with data-bs-target</BvButton>
     </BvContainer>
   </BvNavbar>
-  <div style="height:1000px;">content</div>
-
+  <BvDiv flex>
+    <BvCollapse sticky horizontal id="collapseWidthExample" style="width: 240px;">
+      <BvCard>
+        <BvCardBody>This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.</BvCardBody>
+      </BvCard>
+    </BvCollapse>
+    <BvDiv :paddin="2" flex-grow="grow-1" style="height:1000px;">Content</BvDiv>
+  </BvDiv>
 </template>
 
 <script lang="ts">
